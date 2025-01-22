@@ -3,32 +3,40 @@ import randomColor from 'randomcolor';
 import React, { useState } from 'react';
 
 export default function App() {
-  // State to store the generated color
-  const [color, setColor] = useState('#ffffff'); // Default is white
+  // Default color set to light pink for contrast to white text
+  const [color, setColor] = useState('#f6caf2');
 
-  // Function to handle button click
+  // Function to generate and update the color
   const generateColor = () => {
-    const newColor = randomColor(); // Generate a random color
-    setColor(newColor); // Update the state with the new color
+    const newColor = randomColor();
+    setColor(newColor);
   };
 
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
       <h1>Random Color Generator</h1>
-      <button onClick={generateColor}>Generate</button>
+
+      <button onClick={generateColor} className="button">
+        Generate
+      </button>
+
       <div
         style={{
           marginTop: '20px',
-          width: '150px',
-          height: '150px',
-          backgroundColor: color,
+          width: '200px',
+          height: '200px',
+          backgroundColor: color, // Dynamic background color
           borderRadius: '50%', // Makes the div a circle
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#000', // Ensure text is visible
-          border: '1px solid #000',
-          margin: '20px auto', // Center the circle
+          color: '#fff', // White text color for contrast
+          fontWeight: 'bold',
+          fontSize: '14px',
+          fontFamily: 'Roboto, sans-serif', // Modern font
+          boxShadow: '0 8px 15px rgba(0, 0, 0, 0.2)', // Subtle shadow
+          transition: 'all 0.3s ease', // Smooth color transition
+          margin: '20px auto', // Center the circle horizontally
         }}
       >
         Generated Color: {color}

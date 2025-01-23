@@ -1,12 +1,14 @@
-# React Color Generator
+# React Meme Generator
+
+Create a web app with React that allows for users to generate and download memes using the https://memegen.link/ website.
 
 ## TODO
 
-- [x] random color maybe with library
-- [x] useState with initial value (random color)
-- [x] create a button
-- [x] generate new color on button click
-- [x] generate div which shows generated color as background color
+- [x] Find a way to connect our meme link with react using API
+- [x] Find a way to fetch memes and show them in our application
+- [x] Create a template users can use to preview meme they want to create
+- [x] Add input fields for top text and bottom text
+- [x] Connect text to selected meme via template
 - [x] add text with "Generated Color" to the div
-- [x] generate div which shows generated color as background color
-- [x]create input field, connect to state
+- [x] Create preview
+- [x]Create option to download created meme
